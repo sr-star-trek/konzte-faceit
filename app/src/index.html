@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: blob: http: https:; connect-src 'self' file: http: https: ws: wss:; media-src 'self' file: http: https: blob:; style-src 'self' 'unsafe-inline'; font-src 'self'">
+  <title>Konzte Faceit</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="clans.css">
+  <link rel="stylesheet" href="lane-a.css">
+  <link rel="stylesheet" href="lane-c.css">
+  <link rel="stylesheet" href="lane-d.css">
+  <link rel="stylesheet" href="play2.css">
+  <link rel="stylesheet" href="play3.css">
+  <link rel="stylesheet" href="sup3.css">
+  <link rel="stylesheet" href="reveal.css">
+  <link rel="stylesheet" href="gift.css">
+  <link rel="stylesheet" href="creator2.css">
+  <link rel="stylesheet" href="security.css">
+  <link rel="stylesheet" href="uisync.css">
+  <link rel="stylesheet" href="match2.css">
+  <link rel="stylesheet" href="profile2.css">
+  <link rel="stylesheet" href="shop2.css">
+  <link rel="stylesheet" href="nav2.css">
+  <link rel="stylesheet" href="mobile.css">
+  <link rel="stylesheet" href="season.css">
+  <link rel="stylesheet" href="themes.css">
+  <link rel="stylesheet" href="privacy7.css">
+  <link rel="stylesheet" href="shop3.css">
+  <link rel="stylesheet" href="profile3.css">
+  <link rel="stylesheet" href="lb3.css">
+  <link rel="stylesheet" href="clans3.css">
+  <link rel="stylesheet" href="social3.css">
+  <link rel="stylesheet" href="card3.css">
+  <link rel="stylesheet" href="inv3.css">
+  <link rel="stylesheet" href="prem3.css">
+  <link rel="stylesheet" href="rules3.css">
+  <link rel="stylesheet" href="bl3.css">
+</head>
+<body>
+  <header class="titlebar">
+    <img src="assets/kf-logo.png" class="tb-logo" alt="Konzte Faceit">
+    <span class="tb-online" id="online"></span>
+    <div class="tb-user" id="tb-user"></div>
+    <div class="tb-btns">
+      <button data-win="min" title="Minimize"><svg viewBox="0 0 12 12"><path d="M2 6h8"/></svg></button>
+      <button data-win="max" title="Maximize"><svg viewBox="0 0 12 12"><rect x="2" y="2" width="8" height="8"/></svg></button>
+      <button data-win="close" class="close" title="Close"><svg viewBox="0 0 12 12"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7"/></svg></button>
+    </div>
+  </header>
+  <div class="shell">
+    <nav class="side" id="nav" hidden>
+      <button data-go="news" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 12.5h7M7 16h4"/></svg><span data-i18n="news"></span><i class="dot" id="news-dot" hidden></i></button>
+      <button data-go="play" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></svg><span data-i18n="play"></span></button>
+      <button data-go="lfg" class="nav-btn"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5 6-5s5.4 1.7 6 5"/><circle cx="16.5" cy="9" r="2.6"/><path d="M15.5 14.2c2.6-.3 4.8 1.2 5.5 4.3"/></svg><span data-i18n="lfg"></span></button>
+      <button data-go="clans" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4.5L17 13H5"/></svg><span data-i18n="clans"></span></button>
+      <button data-go="leaderboard" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M4 20V11h4v9M10 20V5h4v15M16 20v-6h4v6"/></svg><span data-i18n="leaderboard"></span></button>
+      <button data-go="profile" class="nav-btn"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4.5 4.5-6.5 8-6.5s7 2 8 6.5"/></svg><span data-i18n="profile"></span></button>
+      <button data-go="staff" class="nav-btn" id="nav-staff" hidden><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span data-i18n="staff"></span></button>
+      <button data-go="shop" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M4 8h16l-1.5 12h-13z"/><path d="M8.5 8a3.5 3.5 0 0 1 7 0"/></svg><span data-i18n="shop"></span></button>
+      <button data-go="referrals" class="nav-btn"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="15" r="3"/><path d="M10.5 9.5l4.2 3.8M3 20c.5-3 2.6-4.5 5-4.5"/></svg><span data-i18n="referrals"></span></button>
+      <button data-go="inventory" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M4 8l8-4 8 4v9l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v9"/></svg><span data-i18n="inventory"></span></button>
+      <button data-go="premium" class="nav-btn prem-nav"><svg viewBox="0 0 24 24"><path d="M3 8l4.5 4L12 5l4.5 7L21 8l-2 11H5z"/></svg><span data-i18n="premium"></span></button>
+      <div class="grow"></div>
+      <button data-go="support" class="nav-btn"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9h8M8 12.5h5"/></svg><span data-i18n="support"></span><i class="dot" id="sup-dot" hidden></i></button>
+      <button data-go="settings" class="nav-btn"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span data-i18n="settings"></span></button>
+    </nav>
+    <main id="view"><div class="bootscr" id="boot"><img src="assets/logo.png" alt=""><b>KONZTE FACEIT</b>
+      <div class="bootbar"><i id="boot-bar" style="width:8%"></i></div><span id="boot-st">Starting…</span></div></main>
+  </div>
+  <div id="modal"></div>
+  <div id="toast"></div>
+  <div id="invites"></div>
+  <script src="nocontext.js"></script>
+  <script src="range-fill.js"></script>
+  <script src="web.js"></script>
+  <script src="catalog.js"></script>
+  <script src="changelog.js"></script>
+  <script src="l10n/es.js"></script>
+  <script src="l10n/pt.js"></script>
+  <script src="l10n/de.js"></script>
+  <script src="l10n/fr.js"></script>
+  <script src="l10n/pl.js"></script>
+  <script src="l10n/tr.js"></script>
+  <script src="i18n.js"></script>
+  <script src="ocr-parse.js"></script>
+  <script src="gift.js"></script>
+  <script src="app.js"></script>
+  <script src="match2.js"></script>
+  <script src="play2.js"></script>
+  <script src="play3.js"></script>
+  <script src="sup3.js"></script>
+  <script src="profile2.js"></script>
+  <script src="themes.js"></script>
+  <script src="music.js"></script>
+  <script src="privacy7.js"></script>
+  <script src="shop2.js"></script>
+  <script src="i18n-b.js"></script>
+  <script src="clans.js"></script>
+  <script src="partners-admin.js"></script>
+  <script src="designers-admin.js"></script>
+  <script src="survey2.js"></script>
+  <script src="i18n-a.js"></script>
+  <script src="lane-a.js"></script>
+  <script src="i18n-c.js"></script>
+  <script src="lane-c.js"></script>
+  <script src="lane-d.js"></script>
+  <script src="player-editor.js"></script>
+  <script src="audio.js"></script>
+  <script src="uisync.js"></script>
+  <script src="reveal.js"></script>
+  <script src="season.js"></script>
+  <script src="bgfx.js"></script>
+  <script src="creator2.js"></script>
+  <script src="partner.js"></script>
+  <script src="security.js"></script>
+  <script src="gamecheck.js"></script>
+  <script src="acdetail.js"></script>
+  <script src="badgehide.js"></script>
+  <script src="i18n-n2.js"></script>
+  <script src="nav2.js"></script>
+  <script src="mobile.js"></script>
+  <script src="presence.js"></script>
+  <script src="survey-in-app.js"></script>
+    <script src="shop3.js"></script>
+  <script src="profile3.js"></script>
+  <script src="lb3.js"></script>
+  <script src="clans3.js"></script>
+  <script src="social3.js"></script>
+  <script src="card3.js"></script>
+  <script src="inv3.js"></script>
+  <script src="prem3.js"></script>
+  <script src="bl3.js"></script>
+  <script src="pxp3.js"></script>
+  <link rel="stylesheet" href="dm3.css">
+  <script src="dm3.js"></script>
+  <link rel="stylesheet" href="player-editor.css">
+  <link rel="stylesheet" href="ctx3.css">
+  <link rel="stylesheet" href="music.css">
+  <script src="ctx3.js"></script>
+  <script src="rules-data.js"></script>
+  <script src="rules3.js"></script>
+    <link rel="stylesheet" href="winter.css">
+  <script src="winter.js"></script>
+    <link rel="stylesheet" href="xmastree.css">
+  <script src="xmastree.js"></script>
+</body>
+</html>

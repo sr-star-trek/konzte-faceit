@@ -1,0 +1,59 @@
+.ldi { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -3px; margin-right: 6px; }
+.ldcard { margin-top: 16px; }
+.ldcard .card-h { display: flex; align-items: center; gap: 8px; }
+.ldcard h4, .ldrec h4 { margin: 0; }
+.ldcard h5, .ldcmp h5 { margin: 0 0 8px; font: 12px TTDB; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); }
+.ldtop { display: grid; grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, .6fr)) minmax(0, 1.6fr); gap: 10px; margin: 14px 0; }
+.ldtop > div { background: var(--panel2); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.ldform { display: flex; flex-direction: column; gap: 6px; } .ldform .form { display: flex; gap: 4px; flex-wrap: wrap; }
+.ldform > span, .ld30 > span, .ldk span { font-size: 11.5px; }
+.ldk b { display: block; font: 20px TTBL; } .ldk span { color: var(--mute); }
+.ld30 { display: flex; flex-direction: column; gap: 4px; } .ld30 b { font: 13px TTDB; font-weight: normal; }
+.ldgrid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, .7fr); gap: 16px; align-items: start; }
+.ldchart { position: relative; width: 100%; min-height: 180px; }
+.ldsvg { display: block; stroke: none; stroke-width: 0; }
+.ldsvg rect, .ldsvg text, .ldsvg .kb { stroke: none; }
+.ldsvg text { fill: var(--mute); font: 10px TTR; }
+.ldsvg .g { stroke: rgba(255,255,255,.06); stroke-width: 1; } .ldsvg .g.one { stroke: rgba(255,255,255,.14); stroke-dasharray: 4 4; }
+.ldsvg .kb { fill: #4a4858; }
+.ldsvg .ldcx { stroke: rgba(255,255,255,.4); stroke-width: 1; stroke-dasharray: 3 3; }
+.ldtip { position: absolute; pointer-events: none; z-index: 5; background: var(--panel3); border: 1px solid rgba(255,255,255,.1); border-radius: 7px; padding: 6px 9px; font-size: 12px; line-height: 1.45; white-space: nowrap; box-shadow: 0 6px 18px rgba(0,0,0,.45); }
+.ldleg { display: flex; gap: 14px; font-size: 11.5px; color: #c9c8d3; margin: -2px 0 6px; }
+.ldleg span { display: inline-flex; align-items: center; gap: 6px; }
+.ldleg .lb { width: 9px; height: 11px; border-radius: 2px 2px 0 0; background: #4a4858; } .ldleg .ll { width: 15px; height: 2px; border-radius: 1px; }
+.ldmaps { display: flex; flex-direction: column; gap: 10px; }
+.ldmap { position: relative; border-radius: 10px; padding: 12px 14px; min-height: 86px; background-size: cover; background-position: center; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; }
+.ldmap::before { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(13,13,17,.92), rgba(13,13,17,.45)); }
+.ldmap > * { position: relative; }
+.ldmap span { font: 10.5px TTDB; letter-spacing: 1px; text-transform: uppercase; } .ldmap.best span { color: var(--win); } .ldmap.worst span { color: var(--lose); }
+.ldmap b { font: 18px TTBL; } .ldmap small { color: #c9c8d3; font-size: 11.5px; }
+@media (max-width: 1250px) { .ldtop { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ldform, .ld30 { grid-column: span 3; } .ldgrid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .ldmaps { grid-column: span 2; flex-direction: row; } .ldmap { flex: 1; } }
+
+.ldcmp { gap: 14px; max-height: 90vh; overflow: auto; }
+.ldch { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px; text-align: center; }
+.ldch > div { display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative; }
+.ldch > div > i { position: absolute; top: 0; left: 50%; margin-left: -44px; width: 10px; height: 10px; border-radius: 50%; }
+.ldch h3 { margin: 0; font-size: 16px; display: flex; align-items: center; gap: 6px; }
+.ldcrs { display: flex; flex-direction: column; }
+.ldcr { display: grid; grid-template-columns: 1fr 180px 1fr; align-items: center; gap: 10px; padding: 7px 4px; border-top: 1px solid var(--edge); text-align: center; font: 14px TTDB; }
+.ldcr > span { font: 12px TTR; } .ldcr .form { display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; }
+.ldfr { display: flex; flex-direction: column; gap: 6px; max-height: 50vh; overflow: auto; }
+.ldfrb { display: flex; align-items: center; gap: 10px; background: var(--panel2); border: 1px solid var(--edge); border-radius: 10px; padding: 8px 12px; text-align: left; }
+.ldfrb:hover { background: var(--panel3); }
+
+.ldrec { margin: 0 0 16px; }
+.ldrec h4 { font: 13px TTDB; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); margin-bottom: 8px; }
+.ldrg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.ldrc { background: var(--panel); border: 1px solid var(--edge); border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.ldrc.click { cursor: pointer; } .ldrc.click:hover { background: var(--panel2); }
+.ldrt { display: flex; align-items: center; font: 11px TTDB; letter-spacing: .8px; text-transform: uppercase; color: var(--gold); }
+.ldrw { display: flex; align-items: center; gap: 10px; min-width: 0; } .ldrw > div { min-width: 0; }
+.ldrw .num { display: flex; align-items: center; gap: 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ldrw small { display: block; font-size: 11.5px; }
+@media (max-width: 1250px) { .ldrg { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+.ldshot { display: flex; gap: 12px; align-items: center; background: rgba(150,157,249,.08); border: 1px solid var(--line-dim); border-radius: 10px; padding: 10px; }
+.ldshot img { width: 120px; height: 68px; object-fit: cover; border-radius: 6px; flex: none; }
+.ldshot .grow > div { margin-bottom: 8px; font-size: 13px; }
+.ldacc { margin-top: 14px; border-top: 1px solid var(--edge); padding-top: 12px; }
+.ldacc h4 { margin: 0 0 6px; }

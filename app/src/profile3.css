@@ -1,0 +1,187 @@
+.page:has(.pf3) { max-width: 1680px; }
+.pf3 svg.pf3-ic { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.pf3-lay { display: grid; grid-template-columns: minmax(0, 1fr) 350px; gap: 16px; align-items: start; }
+.pf3-main, .pf3-right { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.pf3-right { position: sticky; top: 0; }
+.pf3-h { font: 11.5px TTDB; letter-spacing: 1.6px; text-transform: uppercase; color: var(--mute); }
+.pf3-card { padding: 18px 20px; }
+.pf3-ch { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.pf3-ch h3 { margin: 0; font: 17px TTB; }
+.pf3-note { color: var(--mute); font-size: 12.5px; padding: 14px 0 4px; }
+
+.pf3 .pf3-head { margin: 0; padding: 24px 26px; min-height: 168px; display: flex; align-items: center; }
+.pf3 .pf3-head .phead { gap: 24px; align-items: center; flex: 1; min-width: 0; }
+.pf3 .pf3-head .pava .ava.lg { width: 112px; height: 112px; } .pf3 .pf3-head .pava .fava.lg { width: auto; height: auto; }
+.pf3 .phead > .pf3-who { min-width: 0; flex: 1 1 0; max-width: none; display: flex; flex-direction: column; padding-right: 230px; }
+.pf3 .pf3-head h1 { font: 32px TTB; line-height: 1.1; }
+.pf3 .pf3-head .ids { font-size: 13px; margin-top: 6px; }
+.pf3 .pf3-head .ids .gid, .pf3 .pf3-head .ids b { color: var(--text); font-family: TTDB; user-select: text; }
+.pf3 .pf3-head .tags { flex-wrap: wrap; }
+.pf3 .pf3-head .tags:empty { display: none; }
+.pf3-acts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.pf3-acts .btn.ghost { background: color-mix(in srgb, var(--panel2) 82%, transparent); backdrop-filter: blur(4px); }
+.pf3-acts .pf3-rep:hover { color: var(--lose); border-color: color-mix(in srgb, var(--lose) 50%, transparent); }
+.pf3 .pf3-pact { position: absolute; top: 16px; right: 16px; margin: 0; z-index: 3; align-items: center; }
+
+.pf3-stats { display: flex; flex-direction: column; gap: 12px; padding: 14px;
+  background: radial-gradient(700px 220px at 0% 0%, rgba(var(--alfa-rgb), .08), transparent 70%), var(--panel); }
+.pf3-elorow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .95fr); gap: 12px; }
+.pf3-elo { display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 10px; border: 1px solid var(--edge); background: rgba(0,0,0,.22); }
+.pf3-lv { width: 54px; height: 54px; flex: none; filter: drop-shadow(0 0 12px rgba(var(--alfa-rgb), .25)); }
+.pf3-eb { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.pf3-er { display: flex; align-items: baseline; gap: 12px; }
+.pf3-er > b { font: 30px TTB; line-height: 1; } .pf3-er > b small { font: 11px TTDB; color: var(--mute); margin-left: 4px; letter-spacing: .5px; }
+.pf3-season { margin-left: auto; align-self: center; font: 12px TTDB; color: var(--text); padding: 5px 10px; border-radius: 8px; border: 1px solid var(--edge); background: var(--panel2); white-space: nowrap; }
+.pf3-bar { height: 6px; border-radius: 4px; background: var(--panel3); overflow: hidden; }
+.pf3-bar i { display: block; height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent), var(--accent2)); box-shadow: 0 0 12px rgba(var(--alfa-rgb), .5); }
+.pf3-bar.sm { height: 4px; margin-top: 6px; }
+.pf3-bl { display: flex; justify-content: space-between; font: 11.5px TTDB; color: var(--mute); }
+.pf3-bl span:nth-child(2) { color: var(--text); opacity: .8; }
+
+.pf3-places { display: grid; grid-template-columns: repeat(var(--n, 2), minmax(0, 1fr)); border-radius: 10px; border: 1px solid var(--edge); background: rgba(0,0,0,.22); overflow: hidden; }
+.pf3-pl { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; padding: 10px 6px; cursor: pointer; text-align: center; transition: background .15s; }
+.pf3-pl + .pf3-pl { border-left: 1px solid var(--edge); }
+.pf3-pl:hover { background: rgba(255,255,255,.02); }
+.pf3-pl span { font-size: 11.5px; color: var(--mute); } .pf3-pl span em { font-style: normal; opacity: .7; }
+.pf3-pl b { font: 22px TTB; } .pf3-pl small { font-size: 11px; color: var(--mute); }
+.pf3-pl.on { background: linear-gradient(180deg, rgba(var(--alfa-rgb), .12), transparent); box-shadow: inset 0 2px 0 var(--accent); }
+.pf3-pl.top b { color: var(--gold); }
+
+.pf3-tiles { display: grid; grid-template-columns: minmax(0, 2.3fr) repeat(6, minmax(0, 1fr)); gap: 10px; }
+.pf3-tile { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; padding: 12px 6px; border-radius: 10px; border: 1px solid var(--edge); background: rgba(0,0,0,.22); min-height: 78px; }
+.pf3-tile span { font: 11px TTDB; letter-spacing: 1.3px; text-transform: uppercase; color: var(--mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.pf3-tile b { font: 21px TTB; }
+.pf3-tile.w b { color: var(--win); } .pf3-tile.l b { color: var(--lose); }
+.pf3-clan { display: flex; align-items: center; gap: 12px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--edge); background: rgba(0,0,0,.22); color: var(--text); text-align: left; min-width: 0; font: inherit; }
+button.pf3-clan:hover { border-color: var(--line-dim); background: rgba(var(--alfa-rgb), .06); }
+.pf3-clan .pf3-cli, .pf3-clan img.cl-av { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; flex: none; }
+.pf3-clan > .ic, .pf3-cli0 { width: 48px; height: 48px; border-radius: 10px; display: grid; place-items: center; background: var(--panel2); color: var(--mute); flex: none; }
+.pf3-clan > .ic svg, .pf3-cli0 svg { width: 20px; height: 20px; }
+.pf3-cln { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.pf3-cln > b { font: 14px TTB; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pf3-cln span { font-size: 11.5px; color: var(--mute); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; } .pf3-cln span b { color: var(--text); font-weight: normal; font-family: TTDB; }
+.pf3-clp { display: flex; flex-direction: column; align-items: flex-end; } .pf3-clp small { font: 10.5px TTDB; letter-spacing: 1px; text-transform: uppercase; color: var(--mute); } .pf3-clp b { font: 18px TTB; color: var(--gold); }
+.pf3-clan.none { opacity: .85; }
+
+.pf3-row3 { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, .8fr) minmax(0, 1fr); gap: 16px; }
+.pf3-sec { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.pf3-sec > .card { flex: 1; }
+.pf3-sh { display: flex; align-items: baseline; gap: 8px; padding: 0 4px; min-height: 22px; }
+.pf3-sh small { color: var(--mute); font-size: 12px; }
+.pf3-link { display: inline-flex; align-items: center; gap: 4px; background: none; border: 0; padding: 0; color: var(--accent); font: 12px TTDB; }
+.pf3-link:hover { color: var(--accent2); } .pf3-link svg.pf3-ic { width: 13px; height: 13px; }
+.pf3-achbox { display: flex; flex-direction: column; gap: 12px; padding: 14px 16px; }
+.pf3-achic { display: flex; flex-wrap: wrap; gap: 6px; }
+.pf3-achic .ai { width: 34px; height: 34px; border-radius: 9px; border: 1px solid var(--edge); opacity: .45; }
+.pf3-achic .ai svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.pf3-achic .ai.got { opacity: 1; color: var(--gold); border-color: rgba(var(--bravo-rgb), .4); background: rgba(var(--bravo-rgb), .1); }
+.pf3-near { font-size: 12px; color: var(--mute); } .pf3-near b { color: var(--text); font-weight: normal; font-family: TTDB; }
+.pf3-streak { display: grid; grid-template-columns: 1fr 1fr; padding: 0; overflow: hidden; }
+.pf3-streak > div { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 14px 8px; }
+.pf3-streak > div + div { border-left: 1px solid var(--edge); }
+.pf3-streak small { font: 10.5px TTDB; letter-spacing: 1.2px; text-transform: uppercase; color: var(--mute); }
+.pf3-streak b { font: 26px TTB; line-height: 1.1; } .pf3-streak span { font-size: 11.5px; color: var(--mute); }
+.pf3-sic { color: var(--gold); margin-bottom: 2px; } .pf3-sic svg.pf3-ic { width: 20px; height: 20px; }
+.pf3-sic.w { color: var(--win); } .pf3-sic.l { color: var(--lose); }
+.pf3-look { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.pf3-lookb { position: relative; height: 62px; background: var(--panel2); }
+.pf3-lookb .bimg { position: absolute; inset: 0; }
+.pf3-lookn { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); }
+.pf3-lookl { display: flex; flex-direction: column; gap: 4px; padding: 10px 14px 12px; font-size: 12px; color: var(--mute); }
+.pf3-lookl span { display: flex; justify-content: space-between; gap: 10px; } .pf3-lookl b { color: var(--text); font-weight: normal; font-family: TTDB; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.pf3-tbl { width: 100%; border-collapse: separate; border-spacing: 0 4px; margin-top: -4px; }
+.pf3-tbl th { text-align: left; font: 11px TTDB; letter-spacing: 1.2px; text-transform: uppercase; color: var(--mute); padding: 9px 12px; background: var(--panel2); }
+.pf3-tbl th:first-child { border-radius: 8px 0 0 8px; } .pf3-tbl th:last-child { border-radius: 0 8px 8px 0; }
+.pf3-tbl td { padding: 8px 12px; background: rgba(255,255,255,.015); border-top: 1px solid var(--edge); border-bottom: 1px solid var(--edge); vertical-align: middle; }
+.pf3-tbl td:first-child { border-left: 1px solid var(--edge); border-radius: 8px 0 0 8px; box-shadow: inset 3px 0 0 var(--lose); }
+.pf3-tbl tr.w td:first-child { box-shadow: inset 3px 0 0 var(--win); }
+.pf3-tbl td:last-child { border-right: 1px solid var(--edge); border-radius: 0 8px 8px 0; }
+.pf3-tbl tbody tr { cursor: pointer; } .pf3-tbl tbody tr:hover td { background: rgba(var(--alfa-rgb), .06); }
+.pf3-tbl td > b { font-family: TTDB; font-weight: normal; } .pf3-tbl td > small { color: var(--mute); font-size: 11.5px; margin-left: 7px; }
+.pf3-tbl.collapsed tr.pf3-more { display: none; }
+.pf3-res { font: 12px TTDB; letter-spacing: .6px; text-transform: uppercase; } .pf3-res.w { color: var(--win); } .pf3-res.l { color: var(--lose); }
+.pf3-mapc { display: flex; align-items: center; gap: 10px; } .pf3-mapc i { width: 46px; height: 26px; border-radius: 5px; background: center / cover; flex: none; }
+.pf3-mid { color: var(--mute); font-size: 11.5px; text-align: right; width: 1%; white-space: nowrap; }
+.pf3-empty { color: var(--mute); padding: 14px 4px 4px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.pf3-lim { margin: 10px 0 0; color: var(--mute); font-size: 12.5px; }
+
+.pf3 #ld-stats { margin: 0; }
+.pf3 .pf3-ldanchor { display: none; }
+.pf3 .p2-achfull { margin: 0; }
+
+.pf3-punr { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--edge); background: rgba(0,0,0,.18); }
+.pf3-punr > i { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--win) 12%, transparent); color: var(--win); flex: none; }
+.pf3-punr > i svg.pf3-ic { width: 19px; height: 19px; }
+.pf3-punr > div { display: flex; flex-direction: column; gap: 2px; } .pf3-punr b { font: 14px TTDB; } .pf3-punr span { font-size: 12px; color: var(--mute); }
+.pf3-punr.bad { border-color: color-mix(in srgb, var(--lose) 40%, transparent); background: color-mix(in srgb, var(--lose) 7%, transparent); }
+.pf3-punr.bad > i { background: color-mix(in srgb, var(--lose) 16%, transparent); color: var(--lose); }
+
+.pf3-side { display: flex; flex-direction: column; gap: 10px; padding: 16px 18px; }
+.pf3-elo-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.pf3-elo-svg .gl { stroke: var(--edge); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.pf3-elo-svg text { fill: var(--mute); stroke: none; font: 9.5px TTR; }
+.pf3-elo-svg .ln { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.pf3-elo-svg .ar { fill: url(#pf3g); }
+.pf3-elo-svg .s0 { stop-color: var(--accent); stop-opacity: .3; } .pf3-elo-svg .s1 { stop-color: var(--accent); stop-opacity: 0; }
+.pf3-elo-svg circle { fill: var(--panel); stroke: var(--accent); stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.pf3-elo-svg circle.last { fill: var(--accent); stroke: var(--panel); stroke-width: 2; }
+.pf3-last { gap: 12px; }
+.pf3-lastt { display: flex; align-items: stretch; }
+.pf3-lastt > div:first-child { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pf3-lsum { display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: 8px; padding-left: 18px; margin-left: 18px; border-left: 1px solid var(--edge); }
+.pf3-lsum b { font: 22px TTB; }
+.pf3-lbl { font-size: 13px; color: var(--text); font-family: TTDB; }
+.pf3-wl { display: flex; align-items: center; gap: 7px; }
+.pf3-wl i { width: 24px; height: 24px; border-radius: 6px; display: grid; place-items: center; font: 12px TTB; font-style: normal; color: #0d0d11; }
+.pf3-wl i.w { background: var(--win); } .pf3-wl i.l { background: var(--lose); }
+.pf3-wl b { font: 22px TTB; } .pf3-wl em { color: var(--mute); font-style: normal; font-size: 18px; }
+.pf3-form { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; }
+.pf3-form span { height: 6px; border-radius: 3px; background: var(--panel3); }
+.pf3-form span.w { background: var(--win); } .pf3-form span.l { background: var(--lose); }
+.pf3-sub { color: var(--mute); font-size: 12px; margin-top: -4px; }
+.pf3-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 4px; border-radius: 10px; background: var(--panel2); border: 1px solid var(--edge); }
+.pf3-tabs button { border: 0; background: none; padding: 7px 0; border-radius: 7px; font: 12.5px TTDB; color: var(--mute); }
+.pf3-tabs button:hover { color: var(--text); }
+.pf3-tabs button.on { background: var(--panel3); color: var(--text); box-shadow: inset 0 0 0 1px var(--line-dim); }
+.pf3-radar { width: 100%; height: auto; display: block; overflow: visible; }
+.pf3-radar .rg { fill: none; stroke: var(--edge); stroke-width: 1; }
+.pf3-radar .rg:last-of-type { stroke: var(--line-dim); }
+.pf3-radar .rx { stroke: var(--edge); stroke-width: 1; }
+.pf3-radar .rp { fill: rgba(var(--alfa-rgb), .22); stroke: var(--accent); stroke-width: 1.8; stroke-linejoin: round; }
+.pf3-radar .rd { fill: var(--accent); stroke: var(--panel); stroke-width: 1.5; }
+.pf3-radar .rl { fill: var(--text); stroke: none; font: 11px TTR; cursor: default; } .pf3-radar .rl.off { fill: var(--mute); opacity: .55; }
+.pf3-radnote { text-align: center; padding: 40px 0; }
+
+@media (max-width: 1500px) {
+  .pf3 .phead > .pf3-who { padding-right: 0; }
+  .pf3 .pf3-head { padding-top: 62px; }
+  .pf3-lay { grid-template-columns: minmax(0, 1fr) 310px; }
+  .pf3-elorow { grid-template-columns: 1fr; }
+  .pf3-tiles { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .pf3-tiles .pf3-clan { grid-column: 1 / -1; }
+  .pf3-row3 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .pf3-row3 .pf3-achs { grid-column: 1 / -1; }
+}
+@media (max-width: 1100px) {
+  .pf3-lay { grid-template-columns: 1fr; }
+  .pf3-right { position: static; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .pf3-tiles { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pf3-row3 { grid-template-columns: 1fr; }
+}
+
+.pf3-sdd { margin-left: auto; align-self: center; position: relative; z-index: 5; }
+.pf3-sdd .pf3-season { margin-left: 0; }
+.pf3-sbtn { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: border-color .15s, background .15s; }
+.pf3-sbtn:hover, .pf3-sbtn.open { border-color: rgba(var(--alfa-rgb), .55); background: rgba(var(--alfa-rgb), .1); }
+.pf3-sbtn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform .15s; }
+.pf3-sbtn.open svg { transform: rotate(180deg); }
+.pf3-smenu { position: absolute; right: 0; top: calc(100% + 6px); min-width: 210px; padding: 5px; border-radius: 10px; border: 1px solid var(--edge); background: var(--panel); box-shadow: 0 14px 34px rgba(0,0,0,.5); display: flex; flex-direction: column; gap: 2px; }
+.pf3-smenu[hidden] { display: none; }
+.pf3-smenu button { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; padding: 8px 10px; border: 0; border-radius: 7px; background: none; color: var(--text); font: 12.5px TTDB; text-align: left; cursor: pointer; white-space: nowrap; }
+.pf3-smenu button small { font: 11px TTR; color: var(--mute); }
+.pf3-smenu button:hover { background: var(--panel2); }
+.pf3-smenu button.on { background: rgba(var(--alfa-rgb), .14); color: var(--gold); }
+.pf3-sline { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 11.5px TTR; color: var(--mute); }
+.pf3-sline b { font: 12px TTDB; color: var(--text); margin-left: 3px; }
+.pf3-sline b.win { color: var(--win); } .pf3-sline b.lose { color: var(--lose); }

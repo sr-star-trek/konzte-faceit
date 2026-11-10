@@ -1,0 +1,8 @@
+{
+  "bundle": {
+    "resources": { "guard/KonzteGuard.exe": "guard/KonzteGuard.exe" },
+    "windows": {
+      "nsis": { "installerHooks": "./guard/installer-hooks.nsh" }
+    }
+  }
+}

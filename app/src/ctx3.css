@@ -1,0 +1,12 @@
+.cx3 { position: fixed; z-index: 3000; min-width: 210px; max-width: 280px; padding: 6px; border-radius: 12px; background: var(--panel2); border: 1px solid var(--line-dim);
+  box-shadow: 0 18px 44px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.4); animation: cx3in .12s ease-out; }
+@keyframes cx3in { from { opacity: 0; transform: translateY(-4px) scale(.98); } }
+.cx3-head { padding: 6px 10px 8px; border-bottom: 1px solid var(--edge); margin-bottom: 4px; font-size: 13px; overflow: hidden; }
+.cx3-head .nkl { display: flex; align-items: center; gap: 4px; white-space: nowrap; overflow: hidden; font: 13.5px TTDB; }
+.cx3-it { width: 100%; display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 0; border-radius: 8px; background: none; color: var(--text); font: 13px TTDB; text-align: left; cursor: pointer; }
+.cx3-it svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; color: var(--mute); flex: none; }
+.cx3-it:hover { background: rgba(var(--alfa-rgb), .14); } .cx3-it:hover svg { color: var(--accent); }
+.cx3-it.danger { color: var(--lose); } .cx3-it.danger svg { color: var(--lose); } .cx3-it.danger:hover { background: rgba(240,122,122,.12); }
+.cx3-sep { display: block; height: 1px; margin: 4px 6px; background: var(--edge); }
+.so3-fc .so3-fcb .dm3-fb, .so3-fc .so3-fcb [data-fr-rm] { display: none; }
+.cx3-more svg { width: 15px; height: 15px; fill: currentColor; }

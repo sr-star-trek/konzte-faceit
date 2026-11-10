@@ -1,0 +1,17 @@
+.gf-ov { position: fixed; inset: 0; z-index: 9100; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 45%, rgba(40, 32, 10, .85), rgba(5, 5, 8, .95) 70%); backdrop-filter: blur(6px); animation: gfFade .4s ease both; }
+.gf-ov.out { animation: gfOut .35s ease both; }
+.gf-rays { position: absolute; inset: -40%; background: repeating-conic-gradient(rgba(244, 197, 66, .18) 0 6deg, transparent 6deg 22deg);
+  -webkit-mask-image: radial-gradient(circle, #000 15%, transparent 55%); animation: gfSpin 20s linear infinite, gfFade 1s .2s both; }
+.gf-box { position: relative; text-align: center; color: #fff; }
+.gf-ico { width: 150px; height: 150px; margin: 0 auto 18px; color: var(--gold, #f4c542); filter: drop-shadow(0 0 30px rgba(244, 197, 66, .7)); animation: gfPop .8s .15s cubic-bezier(.2, 1.6, .4, 1) both; }
+.gf-ico svg { width: 100%; height: 100%; fill: currentColor; }
+.gf-t { font: 46px TTB, sans-serif; letter-spacing: 2px; text-transform: uppercase; animation: gfUp .5s .5s both; }
+.gf-w { font: 26px TTB, sans-serif; color: var(--gold, #f4c542); margin-top: 8px; animation: gfUp .5s .7s both; }
+.gf-from { display: inline-flex; align-items: center; gap: 10px; margin-top: 16px; color: var(--text2, #c8c8d0); font-size: 17px; animation: gfUp .5s .9s both; }
+.gf-from img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+.gf-ok { display: block; margin: 28px auto 0; min-width: 200px; animation: gfUp .5s 1.2s both; }
+@keyframes gfFade { from { opacity: 0; } } @keyframes gfOut { to { opacity: 0; } }
+@keyframes gfSpin { to { transform: rotate(360deg); } }
+@keyframes gfPop { from { opacity: 0; transform: scale(.3) rotate(-15deg); } }
+@keyframes gfUp { from { opacity: 0; transform: translateY(12px); } }

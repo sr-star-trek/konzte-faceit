@@ -1,0 +1,9 @@
+.sy-ghost { pointer-events: none !important; z-index: 49; }
+.bigmap .sy-live { position: absolute; right: 18px; top: 16px; z-index: 2; padding: 6px 22px; border-radius: 6px; font: 20px/1 TTBL, sans-serif; letter-spacing: 3px; text-transform: uppercase;
+  color: #0c1a0e; background: linear-gradient(90deg, var(--win, #7ee08a), #c9f7cf); box-shadow: 0 0 26px rgba(126, 224, 138, .55); transform: skewX(-14deg); pointer-events: none; }
+.sy-coin { position: fixed; z-index: 9500; width: 14px; height: 14px; border-radius: 50%; pointer-events: none; opacity: 0;
+  background: radial-gradient(circle at 35% 30%, #fff3c4, #f4c542 45%, #b9801a); box-shadow: 0 0 10px rgba(244, 197, 66, .8); }
+.sy-elo { display: inline-block; font-variant-numeric: tabular-nums; }
+#tb-user .kf { display: inline-block; }
+.switch::after { transition-duration: .1s; }
+body.calm .sy-coin, body.calm .sy-live { display: none; }

@@ -1,0 +1,34 @@
+.mu-thumb { position: relative; }
+.mu-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, rgba(0, 0, 0, .65)); pointer-events: none; }
+.mu-thumb .mu-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 2;
+  width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .35); padding: 0;
+  background: rgba(10, 8, 14, .55); color: #fff; display: grid; place-items: center; cursor: pointer;
+  backdrop-filter: blur(4px); transition: transform .15s, background .15s, border-color .15s;
+}
+.mu-thumb .mu-play svg { width: 20px; height: 20px; }
+.mu-thumb .mu-play:hover { transform: translate(-50%, -50%) scale(1.08); background: var(--accent, #7c5cff); border-color: transparent; }
+.mu-thumb .mu-play.on { background: var(--gold, #e7c26a); color: #120d05; border-color: transparent; }
+.mu-thumb .mu-eq { position: absolute; right: 10px; bottom: 9px; z-index: 2; display: flex; align-items: flex-end; gap: 3px; height: 18px; }
+.mu-thumb .mu-eq i { width: 3px; height: 30%; border-radius: 2px; background: rgba(255, 255, 255, .75); transition: height .3s; }
+.mu-thumb.on .mu-eq i { background: var(--gold, #e7c26a); animation: mu-eq .9s ease-in-out infinite alternate; }
+.mu-thumb.on .mu-eq i:nth-child(2) { animation-delay: -.3s; animation-duration: .7s; }
+.mu-thumb.on .mu-eq i:nth-child(3) { animation-delay: -.6s; animation-duration: 1.1s; }
+.mu-thumb.on .mu-eq i:nth-child(4) { animation-delay: -.15s; animation-duration: .8s; }
+.mu-thumb.on .mu-eq i:nth-child(5) { animation-delay: -.45s; animation-duration: 1s; }
+@keyframes mu-eq { from { height: 20%; } to { height: 100%; } }
+.mu-thumb .th-sw { z-index: 2; }
+.iv3-curart .mu-thumb .mu-play, .sh3-cth .mu-thumb .mu-play { width: 30px; height: 30px; }
+.iv3-curart .mu-thumb .mu-play svg, .sh3-cth .mu-thumb .mu-play svg { width: 14px; height: 14px; }
+.sh3-cth .mu-thumb .mu-eq, .sh3-cth .mu-thumb .th-sw { display: none; }
+
+.mu-try { display: flex; flex-direction: column; gap: 10px; }
+.mu-try .mu-thumb { aspect-ratio: 16 / 9; border-radius: 10px; }
+.mu-try .mu-thumb .mu-play { width: 58px; height: 58px; }
+.mu-try .mu-thumb .mu-play svg { width: 24px; height: 24px; }
+.mu-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mu-row > span { display: inline-flex; align-items: center; gap: 6px; min-width: 70px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
+.mu-row > span svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.8; }
+.mu-row .seg button { display: inline-flex; align-items: center; gap: 5px; }
+.mu-row .seg button svg { width: 11px; height: 11px; }
+.mu-fx { display: flex; flex-wrap: wrap; gap: 6px; }

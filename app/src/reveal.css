@@ -1,0 +1,44 @@
+.rv-ov { position: fixed; inset: 0; z-index: 9000; display: grid; place-items: center; background: radial-gradient(ellipse at 50% 45%, rgba(30, 26, 12, .82), rgba(5, 5, 8, .94) 70%);
+  backdrop-filter: blur(6px); animation: rvFade .4s ease both; }
+.rv-ov.out { animation: rvFadeOut .35s ease both; }
+.rv-box { width: min(560px, 92vw); text-align: center; color: var(--text, #eee); }
+.rv-tag { font: 15px TTB, sans-serif; letter-spacing: 4px; text-transform: uppercase; color: var(--gold, #f4c542); opacity: 0; animation: rvUp .5s .1s ease both; }
+
+.rv-stage { position: relative; width: 220px; height: 220px; margin: 26px auto 18px; }
+.rv-stage img { position: absolute; inset: 22px; width: 176px; height: 176px; object-fit: contain; }
+.rv-q { animation: rvQ 1.62s linear both; }
+.rv-lvl { opacity: 0; transform: scale(.4) rotate(-12deg); filter: drop-shadow(0 0 26px rgba(244, 197, 66, .75)); animation: rvLvl .9s 1.6s cubic-bezier(.2, 1.6, .4, 1) both; }
+.rv-scan { position: absolute; left: 18px; right: 18px; height: 3px; top: 30px; border-radius: 3px; background: linear-gradient(90deg, transparent, #f4c542, transparent);
+  box-shadow: 0 0 14px #f4c542; animation: rvScan .21s 0s ease-in-out 5 alternate both, rvGone .15s 1.45s both; }
+.rv-ring { position: absolute; inset: 0; border-radius: 50%; border: 3px solid rgba(244, 197, 66, 0); opacity: 0; animation: rvRing 1s 1.58s ease-out forwards; }
+.rv-rays { position: absolute; inset: -120px; opacity: 0; background: repeating-conic-gradient(from 0deg, rgba(244, 197, 66, .22) 0 6deg, transparent 6deg 22deg);
+  -webkit-mask-image: radial-gradient(circle, #000 18%, transparent 62%); animation: rvRays 1.2s 1.58s ease-out both, rvSpin 18s 1.58s linear infinite; }
+
+.rv-segs { display: flex; gap: 8px; justify-content: center; margin-bottom: 18px; }
+.rv-segs i { width: 54px; height: 6px; border-radius: 4px; background: rgba(255, 255, 255, .12); position: relative; overflow: hidden; }
+.rv-segs i::after { content: ''; position: absolute; inset: 0; background: var(--gold, #f4c542); box-shadow: 0 0 10px #f4c542; transform: scaleX(0); transform-origin: left;
+  animation: rvSeg .14s calc(.03s + var(--i) * .22s) ease-out both; }
+
+.rv-elo { display: flex; align-items: baseline; justify-content: center; gap: 8px; opacity: 0; animation: rvUp .3s .95s ease both; }
+.rv-elo b { font: 64px/1 TTB, sans-serif; color: #fff; text-shadow: 0 0 24px rgba(244, 197, 66, .45); font-variant-numeric: tabular-nums; min-width: 3ch; }
+.rv-elo span { font: 18px TTB, sans-serif; color: var(--gold, #f4c542); letter-spacing: 2px; }
+.rv-name { font: 30px TTB, sans-serif; color: var(--gold, #f4c542); margin-top: 6px; opacity: 0; animation: rvUp .5s 1.85s ease both; }
+.rv-sub { margin-top: 10px; color: var(--mute, #9a9aa5); font-size: 14px; opacity: 0; animation: rvUp .5s 2.15s ease both; }
+.rv-sub2 { margin-top: 4px; color: var(--text2, #c8c8d0); font-size: 14px; opacity: 0; animation: rvUp .5s 2.35s ease both; }
+.rv-go { margin-top: 24px; min-width: 180px; opacity: 0; animation: rvUp .5s 2.8s ease both; }
+
+.rv-ov.calm *, .rv-ov.calm { animation-duration: .01s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; }
+.rv-ov.calm .rv-q, .rv-ov.calm .rv-scan { display: none; }
+
+@keyframes rvFade { from { opacity: 0; } } @keyframes rvFadeOut { to { opacity: 0; } }
+@keyframes rvUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes rvQ { 0% { opacity: .9; transform: scale(1); } 60% { transform: scale(1.04); } 92% { opacity: .9; filter: brightness(1); }
+  97% { opacity: 1; transform: scale(1.12); filter: grayscale(0) brightness(3); } 100% { opacity: 0; transform: scale(1.2); } }
+@keyframes rvScan { from { top: 30px; } to { top: 186px; } }
+@keyframes rvGone { to { opacity: 0; } }
+@keyframes rvLvl { to { opacity: 1; transform: none; } }
+@keyframes rvRing { 0% { opacity: 1; transform: scale(.5); border-color: rgba(255, 233, 160, .95); } 100% { opacity: 1; transform: scale(1.9); border-color: rgba(244, 197, 66, 0); } }
+@keyframes rvRays { 0% { opacity: 0; transform: scale(.6); } 30% { opacity: 1; } 100% { opacity: .55; transform: scale(1); } }
+@keyframes rvSpin { to { rotate: 360deg; } }
+@keyframes rvSeg { to { transform: scaleX(1); } }
+.rv-stage .rv-clan { position: absolute; inset: 22px; display: grid; place-items: center; } .rv-stage .rv-clan svg { width: 176px; height: 176px; }

@@ -1,0 +1,52 @@
+[package]
+name = "konzte"
+version = "1.1.4"
+description = "Konzte Faceit — ranked matchmaking for Combat Master"
+edition = "2021"
+default-run = "konzte"
+
+[build-dependencies]
+tauri-build = { version = "=2.7.4", features = [] }
+
+[dependencies]
+tauri = { version = "=2.12.5", features = ["tray-icon", "image-png"] }
+tauri-plugin-single-instance = "=2.5.5"
+tauri-plugin-notification = "=2.8.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls", "stream", "json"] }
+futures-util = "0.3"
+sha2 = "0.10"
+hex = "0.4"
+base64 = "0.22"
+ed25519-dalek = { version = "2", features = ["pkcs8", "pem"] }
+regex = "1"
+once_cell = "1"
+include_dir = "0.7"
+dirs = "6"
+sys-locale = "0.3"
+rand = "0.9"
+arboard = { version = "3", default-features = false, features = ["image-data", "wayland-data-control"] }
+image = { version = "0.25", default-features = false, features = ["png"] }
+open = "5"
+mime_guess = "2"
+
+[target.'cfg(any(windows, target_os = "linux"))'.dependencies]
+kzguard = { path = "../app/native/kzguard", default-features = false }
+
+[target.'cfg(windows)'.dependencies]
+winreg = "0.55"
+windows-sys = { version = "0.60", features = ["Win32_Foundation", "Win32_System_Diagnostics_ToolHelp", "Win32_System_Threading", "Win32_System_SystemInformation", "Win32_System_ProcessStatus", "Win32_System_Services", "Win32_UI_Shell", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
+
+[profile.perf]
+inherits = "release"
+debug-assertions = true
+lto = false
+codegen-units = 16

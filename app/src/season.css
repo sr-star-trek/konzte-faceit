@@ -1,0 +1,45 @@
+body.ss-winter {
+  --bg: #0a0e15; --panel: #111722; --panel2: #17202d; --panel3: #202b3a;
+  --line: #8fd3ff; --line-dim: rgba(143, 211, 255, .28); --edge: rgba(200, 230, 255, .08);
+  --accent: #8fd3ff; --accent2: #cdeeff;
+  --alfa: #8fd3ff; --bravo: #c9b6ff; --alfa-rgb: 143, 211, 255; --bravo-rgb: 201, 182, 255;
+  --ss: #8fd3ff; --ss-light: #dff5ff; --ss-dark: #07202e; --ss-rgb: 143, 211, 255;
+  --ss-g1: 80, 170, 255; --ss-g2: 150, 120, 255;
+}
+body.ss-spring {
+  --bg: #0b0e0a; --panel: #131810; --panel2: #191f15; --panel3: #222a1d;
+  --line: #a6e35a; --line-dim: rgba(166, 227, 90, .28); --edge: rgba(230, 255, 200, .07);
+  --accent: #a6e35a; --accent2: #d4f59a;
+  --alfa: #a6e35a; --bravo: #ffd84d; --alfa-rgb: 166, 227, 90; --bravo-rgb: 255, 216, 77;
+  --ss: #a6e35a; --ss-light: #dcf7a8; --ss-dark: #142008; --ss-rgb: 166, 227, 90;
+  --ss-g1: 166, 227, 90; --ss-g2: 255, 216, 77;
+}
+body.ss-summer {
+  --bg: #0f0d0b; --panel: #18150f; --panel2: #201b14; --panel3: #2b241a;
+  --line: #ffb547; --line-dim: rgba(255, 181, 71, .3); --edge: rgba(255, 240, 210, .07);
+  --accent: #ffb547; --accent2: #ffd58e;
+  --alfa: #3fd4e6; --bravo: #ffb547; --alfa-rgb: 63, 212, 230; --bravo-rgb: 255, 181, 71;
+  --ss: #ffb547; --ss-light: #ffdc96; --ss-dark: #2a1700; --ss-rgb: 255, 181, 71;
+  --ss-g1: 63, 212, 230; --ss-g2: 255, 170, 60;
+}
+body.ss-autumn {
+  --bg: #100c0a; --panel: #1a1411; --panel2: #221a15; --panel3: #2d231c;
+  --line: #ff8a3d; --line-dim: rgba(255, 138, 61, .3); --edge: rgba(255, 225, 200, .07);
+  --accent: #ff8a3d; --accent2: #ffb98a;
+  --alfa: #e8b04a; --bravo: #e0603a; --alfa-rgb: 232, 176, 74; --bravo-rgb: 224, 96, 58;
+  --ss: #ff8a3d; --ss-light: #ffbb85; --ss-dark: #2a1006; --ss-rgb: 255, 138, 61;
+  --ss-g1: 232, 176, 74; --ss-g2: 224, 96, 58;
+}
+
+body[class*="ss-"]:not(.animbg):not(.flat) {
+  background-image:
+    radial-gradient(ellipse 60% 55% at 0% 100%, rgba(var(--ss-g1), .2), transparent 70%),
+    radial-gradient(ellipse 60% 55% at 100% 0%, rgba(var(--ss-g2), .24), transparent 70%);
+}
+
+body[class*="ss-"] [class*="m2-"] { --gold: var(--ss); }
+body[class*="ss-"] .btn.m2-cta { background: linear-gradient(180deg, var(--ss-light), var(--ss)); color: var(--ss-dark); box-shadow: 0 8px 26px rgba(var(--ss-rgb), .25); }
+body[class*="ss-"] .stepper.m2-steps > .cur { background: linear-gradient(180deg, rgba(var(--ss-rgb), .12), rgba(var(--ss-rgb), .03)); }
+body[class*="ss-"] .stepper.m2-steps > .cur > i,
+body[class*="ss-"] .m2-wiz .ws.cur i,
+body[class*="ss-"] .m2-bx span { color: var(--ss-dark); }

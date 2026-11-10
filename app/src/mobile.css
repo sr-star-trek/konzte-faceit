@@ -1,0 +1,49 @@
+.mtab, .mback { display: none; }
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden; }
+  body { -webkit-text-size-adjust: 100%; }
+  .titlebar { height: 50px; gap: 8px; padding: 0 10px; padding-top: env(safe-area-inset-top); }
+  .titlebar .tb-online, .titlebar .n2-search span, .titlebar .n2-search kbd, .titlebar .n2-search .kbd { display: none !important; }
+  .titlebar .n2-search { flex: 0 0 36px; min-width: 36px; width: 36px; padding: 0; justify-content: center; margin-left: auto; }
+  .titlebar .tb-logo { height: 22px; }
+  .tb-user { margin-left: 0; min-width: 0; }
+  .tb-user .tb-meta, .tb-user .tbu-txt, .tb-user > div:not(:last-child) { max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .shell { height: calc(100% - 50px); }
+  #nav, #nav.n2 { position: fixed !important; z-index: 900; left: 0; top: 0; bottom: 0; width: 260px !important; max-width: 82vw; transform: translateX(-105%); transition: transform .22s ease;
+    background: #0e0e12 !important; padding-top: calc(14px + env(safe-area-inset-top)) !important; box-shadow: 10px 0 40px rgba(0,0,0,.6); }
+  body.m-menu #nav { transform: none; }
+  #nav .n2-collapse { display: none !important; }
+  #nav.n2 .nav-btn { min-height: 44px; font-size: 15px; }
+  .mback { display: block; position: fixed; inset: 0; z-index: 899; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .2s; }
+  body.m-menu .mback { opacity: 1; pointer-events: auto; }
+  .mtab { display: flex; position: fixed; z-index: 800; left: 0; right: 0; bottom: 0; height: calc(58px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom);
+    background: rgba(10,10,13,.97); border-top: 1px solid var(--edge); backdrop-filter: blur(10px); }
+  .mtab button { flex: 1; border: 0; background: none; color: #8d8b99; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font: 10.5px TTDB, sans-serif; letter-spacing: .3px; position: relative; }
+  .mtab button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .mtab button.on { color: var(--accent); }
+  .mtab button.on::before { content: ''; position: absolute; top: 0; left: 30%; right: 30%; height: 2px; border-radius: 2px; background: var(--accent); }
+  .mtab button i { position: absolute; top: 7px; left: calc(50% + 6px); min-width: 16px; height: 16px; border-radius: 8px; background: var(--gold); color: #17140a; font: 10px/16px TTB, sans-serif; font-style: normal; padding: 0 4px; }
+  main, #view { padding: 14px 12px calc(80px + env(safe-area-inset-bottom)) !important; }
+  .page { max-width: none !important; }
+  h1 { font-size: 26px !important; } .page > h1, .page-h h1 { font-size: 26px !important; }
+  h2 { font-size: 20px; }
+  .card { padding: 14px; }
+  img, video, canvas, svg { max-width: 100%; }
+  table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #modal .overlay { padding: 10px !important; align-items: flex-start !important; overflow-y: auto; }
+  #modal .overlay > * { width: 100% !important; max-width: 100% !important; min-width: 0 !important; max-height: none !important; }
+  .modal, .modal.dossier, .modal.notice { width: 100% !important; }
+  .btn { min-height: 38px; }
+  input, select, textarea { font-size: 16px !important; }
+  .toast, .toasts { bottom: calc(70px + env(safe-area-inset-bottom)) !important; }
+  .uinote { left: 10px !important; right: 10px !important; bottom: calc(70px + env(safe-area-inset-bottom)) !important; max-width: none !important; }
+}
+@media (max-width: 760px) {
+  .titlebar .n2-kbd { display: none !important; }
+  .tb-user { padding: 2px; gap: 8px; }
+  .tb-user .nick, .tb-user .elo { max-width: 110px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+  .p2 .pactions { position: static !important; display: flex; justify-content: flex-end; gap: 6px; padding: 8px 8px 0; }
+  .p2 .pbanner { display: flex; flex-direction: column; }
+  html.web [data-prefsw="autostart"], html.web [data-prefsw="startHidden"], html.web [data-prefsw="tray"] { pointer-events: none; opacity: .4; }
+}
+@media (max-width: 400px) { .tb-user .nick + *, .tb-user .elo { display: none; } }

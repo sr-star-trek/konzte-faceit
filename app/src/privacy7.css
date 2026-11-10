@@ -1,0 +1,22 @@
+.pv7 { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--edge); }
+.pv7-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; margin-bottom: 12px; }
+.pv7-h h4 { margin: 0 0 4px; color: var(--text); font-size: 14px; text-transform: none; letter-spacing: .2px; }
+.pv7-h .mute, .pv7-r .mute { display: block; font-size: 12.5px; line-height: 1.45; }
+.pv7-hold { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; margin-bottom: 8px; font-size: 12.5px; }
+.pv7-c { display: inline-flex; align-items: baseline; gap: 5px; padding: 3px 9px; border-radius: 20px; background: var(--panel2); border: 1px solid var(--edge); color: var(--mute); }
+.pv7-c b { color: var(--text); font-weight: normal; }
+.pv7-r { display: flex; gap: 14px; padding: 14px 0; border-top: 1px solid var(--edge); }
+.pv7-r b { display: block; font-family: TTDB; font-weight: normal; margin-bottom: 2px; }
+.pv7-n { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font: 12px TTDB; background: var(--panel3); color: var(--accent); }
+.pv7-r.danger .pv7-n { color: var(--lose); }
+.pv7-r textarea { width: 100%; margin-top: 10px; resize: vertical; min-height: 54px; }
+.pv7-a { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 8px; margin-top: 10px; }
+.pv7-a input { flex: 1; min-width: 180px; }
+.pv7-ck { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; }
+.pv7-ck label { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; }
+.pv7-ck input { width: 15px; height: 15px; padding: 0; accent-color: var(--accent); }
+.pv7-m { margin-top: 10px; }
+.pv7-warn { margin: 10px 0 0; font-size: 12.5px; color: var(--gold); }
+.pv7-del { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: rgba(224,66,79,.1); border: 1px solid rgba(224,66,79,.35); font-size: 13px; }
+.pv7-log { display: flex; flex-wrap: wrap; gap: 6px 12px; padding-top: 12px; border-top: 1px solid var(--edge); font-size: 12px; color: var(--mute); }
+.pv7-foot { margin: 12px 0 0; font-size: 12px; }
